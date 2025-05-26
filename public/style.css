@@ -139,7 +139,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* 影を強調 */
     overflow: hidden;
-    margin-top: 50px; /* ヘッダーの高さ分下げる */
+    margin-top: 40px; /* ヘッダーの高さ分下げる */
     margin-bottom: 30px;
     border: 1px solid #BDC3C7; /* わずかなボーダーを追加して立体感を */
     position: fixed; /* 画面に対して固定 */
@@ -147,7 +147,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /* 中央配置 */
     width: 80%; /* 横画面の幅 */
-    height: 80vh; /* 横画面の高さ */
+    height: 75vh; /* 横画面の高さ */
     max-width: 1280px; /* 必要に応じて最大幅を設定 */
 }
 
