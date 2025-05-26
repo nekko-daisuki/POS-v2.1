@@ -638,8 +638,22 @@ body {
         grid-column: span 1; /* 横画面と同じ */
         font-size: 0.9em;
     }
+    
     .product-button.empty {
-        display: none;
+        border: none;
+        box-shadow: none;
+        cursor: default;
+        background-color: transparent;
+    }
+    .product-button.empty.transparent {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+    .product-button.empty:hover {
+        background-color: transparent;
+        box-shadow: none;
+        transform: none;
     }
 
     .action-buttons .btn {
