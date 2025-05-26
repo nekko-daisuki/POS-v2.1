@@ -8,6 +8,7 @@ body {
     background-color: #ECF0F1; /* 明るいグレーを背景に */
     margin: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
     color: #2C3E50; /* 基本のテキスト色を濃い青に */
 }
 
