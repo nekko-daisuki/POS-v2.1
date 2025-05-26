@@ -155,6 +155,7 @@ body {
     padding: 20px;
     border-right: 1px solid #BDC3C7; /* 中間グレーのボーダー */
     display: flex;
+    overflow-y: auto;
     flex-direction: column;
 }
 
@@ -169,7 +170,7 @@ body {
 
 .order-list {
     flex-grow: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
     margin-bottom: 20px;
 }
 
