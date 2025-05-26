@@ -167,9 +167,11 @@ body {
 }
 
 .order-list {
-    flex-grow: 1;
+    max-height: 400px; /* Adjust as needed, based on your layout */
     overflow-y: auto;
-    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Optional: Add a border to visualize the scrollable area */
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .order-item {
