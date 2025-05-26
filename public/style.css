@@ -606,7 +606,7 @@ body {
         padding: 15px;
         border-right: none;
         border-bottom: 1px solid #BDC3C7;
-        height: 35%; /* pos-containerの35% */
+        height: 45%; /* pos-containerの35% */
         flex-shrink: 0;
     }
     .order-list {
