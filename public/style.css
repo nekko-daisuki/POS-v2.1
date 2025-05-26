@@ -141,7 +141,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* 影を強調 */
     overflow: hidden;
-    min-height: calc(100vh - 100px);
+    min-height: 80vh;
     margin-top: 80px;
     margin-bottom: 20px;
     border: 1px solid #BDC3C7; /* わずかなボーダーを追加して立体感を */
