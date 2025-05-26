@@ -14,7 +14,7 @@ body {
 /* ヘッダー */
 .app-header {
     width: 100%;
-    height: 1.5vh;
+    height: 2vh;
     background-color: #2C3E50; /* 濃い青をヘッダーの背景に */
     color: #ECF0F1; /* 明るいグレーをテキスト色に */
     padding: 15px 20px;
@@ -590,7 +590,7 @@ body {
         flex-direction: column;
         width: 95%; /* 縦画面の幅 */
         height: calc(100vh - 100px); /* ヘッダーにかぶらない程度の高さ */
-        margin-top: 60px; /* ヘッダーの高さ分下げる */
+        margin-top: 0.5px; /* ヘッダーの高さ分下げる */
         border-radius: 8px;
         box-shadow: none;
         position: fixed; /* 画面に対して固定 */
