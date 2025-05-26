@@ -14,6 +14,7 @@ body {
 /* ヘッダー */
 .app-header {
     width: 100%;
+    height: 1.5vh
     background-color: #2C3E50; /* 濃い青をヘッダーの背景に */
     color: #ECF0F1; /* 明るいグレーをテキスト色に */
     padding: 15px 20px;
