@@ -169,7 +169,7 @@ body {
 
 .order-list {
     flex-grow: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
     margin-bottom: 20px;
 }
 
