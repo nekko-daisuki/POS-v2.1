@@ -7,8 +7,7 @@ body {
     min-height: 100vh;
     background-color: #ECF0F1; /* 明るいグレーを背景に */
     margin: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden; /* 画面全体のスクロールを禁止 */
     color: #2C3E50; /* 基本のテキスト色を濃い青に */
 }
 
@@ -136,26 +135,29 @@ body {
 /* POSコンテナの調整 (ヘッダーと重ならないように) */
 .pos-container {
     display: flex;
-    width: 80%;
-    max-width: 1280px;
     background-color: #ECF0F1; /* 明るいグレーをパネルの背景に */
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* 影を強調 */
     overflow: hidden;
-    min-height: 80vh;
-    margin-top: 80px;
+    margin-top: 80px; /* ヘッダーの高さ分下げる */
     margin-bottom: 20px;
     border: 1px solid #BDC3C7; /* わずかなボーダーを追加して立体感を */
+    position: fixed; /* 画面に対して固定 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 中央配置 */
+    width: 80%; /* 横画面の幅 */
+    height: 80vh; /* 横画面の高さ */
+    max-width: 1280px; /* 必要に応じて最大幅を設定 */
 }
 
 /* 注文リストパネル */
 .order-panel {
-    width: 35%;
+    width: 35%; /* pos-containerの35% */
     min-width: 300px;
     padding: 20px;
     border-right: 1px solid #BDC3C7; /* 中間グレーのボーダー */
     display: flex;
-    overflow-y: auto;
     flex-direction: column;
 }
 
@@ -170,7 +172,7 @@ body {
 
 .order-list {
     flex-grow: 1;
-    overflow-y: auto;
+    overflow-y: auto; /* 注文リストをスクロール可能に */
     margin-bottom: 20px;
 }
 
@@ -279,13 +281,14 @@ body {
 
 /* 商品選択パネル */
 .menu-panel {
-    width: 65%;
+    width: 65%; /* pos-containerの65% */
     min-width: 500px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: #F8F9FA; /* メニューパネルは少し明るい背景に */
+    overflow-y: auto; /* menu-panelをスクロール可能に */
 }
 
 .product-group {
@@ -306,6 +309,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+    /* width: calc((98% / 5) - (10px * 4 / 5)); */ /* 5個とgapを合わせてmenu-panelの98%に */
     aspect-ratio: 1 / 1;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
@@ -481,14 +485,19 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    width: 90%;
+    width: 80%; /* 横画面と同じ幅 */
     max-width: 800px;
-    margin-top: 80px;
+    margin-top: 80px; /* ヘッダーの高さ分下げる */
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 100px);
+    height: calc(100vh - 100px); /* 画面の高さからヘッダーとマージンを引いた高さ */
     border: 1px solid #BDC3C7;
+    position: fixed; /* 画面に対して固定 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 中央配置 */
+    overflow: hidden; /* 履歴コンテナ内のスクロールは子要素に任せる */
 }
 
 .history-title {
@@ -503,7 +512,7 @@ body {
 
 .order-history-list {
     flex-grow: 1;
-    overflow-y: auto;
+    overflow-y: auto; /* 注文履歴をスクロール可能に */
     margin-bottom: 20px;
     border: 1px solid #BDC3C7;
     padding: 10px;
@@ -571,46 +580,59 @@ body {
 
 
 /* レスポンシブ対応 */
-@media (max-width: 800px) {
+@media (orientation: portrait) { /* 縦画面のとき */
     .pos-container {
         flex-direction: column;
-        width: 100%;
-        min-height: calc(100vh - 80px);
-        height: auto;
+        width: 95%; /* 縦画面の幅 */
+        height: calc(100vh - 100px); /* ヘッダーにかぶらない程度の高さ */
+        margin-top: 60px; /* ヘッダーの高さ分下げる */
         border-radius: 0;
         box-shadow: none;
-        margin-top: 60px;
+        position: fixed; /* 画面に対して固定 */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* 中央配置 */
+        overflow: hidden; /* コンテナ内のスクロールは子要素に任せる */
     }
 
-    .order-panel,
-    .menu-panel {
+    .order-panel {
         width: 100%;
         min-width: unset;
         padding: 15px;
         border-right: none;
         border-bottom: 1px solid #BDC3C7;
-    }
-
-    .order-panel {
-        height: auto;
+        height: 35%; /* pos-containerの35% */
         flex-shrink: 0;
     }
     .order-list {
-        height: auto;
-        max-height: 200px;
+        flex-grow: 1; /* 残りのスペースを占有 */
+        overflow-y: auto; /* 注文リストをスクロール可能に */
+        margin-bottom: 20px;
     }
 
     .menu-panel {
+        width: 100%;
+        min-width: unset;
+        padding: 10px;
+        height: 65%; /* pos-containerの65% */
         flex-grow: 1;
-        overflow-y: auto;
+        overflow-y: auto; /* menu-panelをスクロール可能に */
     }
 
     .product-group {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr); /* 横画面と同じ5列レイアウト */
+        gap: 10px;
     }
+    .product-category-button,
+    .product-button {
+        /* width: calc((98% / 5) - (10px * 4 / 5)); */ /* 5個とgapを合わせてmenu-panelの98%に */
+        aspect-ratio: 1 / 1;
+        font-size: 0.9em; /* フォントサイズを調整 */
+    }
+
     .product-category-button {
-        grid-column: span 2;
-        font-size: 1.1em;
+        grid-column: span 1; /* 横画面と同じ */
+        font-size: 0.9em;
     }
     .product-button.empty {
         display: none;
@@ -619,10 +641,6 @@ body {
     .action-buttons .btn {
         font-size: 1em;
         padding: 12px 15px;
-    }
-    .btn-history { /* このボタンはHTMLから削除したので、実質不要ですが念のため残します */
-        margin-left: 5px;
-        flex: 1;
     }
     .btn-pay {
         margin-right: 5px;
@@ -635,12 +653,16 @@ body {
 
     /* 履歴コンテナの調整 */
     .history-container {
-        width: 100%;
-        min-height: calc(100vh - 80px);
-        height: auto;
+        width: 95%; /* 縦画面の幅 */
+        height: calc(100vh - 100px); /* 縦画面の高さ */
         margin-top: 60px;
         border-radius: 0;
         box-shadow: none;
+        position: fixed; /* 画面に対して固定 */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* 中央配置 */
+        overflow: hidden; /* 履歴コンテナ内のスクロールは子要素に任せる */
     }
 
     /* ヘッダーのレスポンシブ調整 */
@@ -668,12 +690,28 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    .product-group {
-        grid-template-columns: 1fr;
+/* @media (max-width: 480px) { */
+/* .product-group { */
+/* grid-template-columns: 1fr; */
+/* } */
+/* .product-category-button { */
+/* grid-column: span 1; */
+/* font-size: 1.1em; */
+/* } */
+/* } */
+
+@media (orientation: landscape) { /* 横画面のとき */
+    .pos-container {
+        width: 80%; /* 横画面の幅 */
+        height: 80vh; /* 横画面の高さ */
     }
-    .product-category-button {
-        grid-column: span 1;
-        font-size: 1.1em;
-    }
+}
+
+/* product-category-buttonとproduct-buttonの幅を調整 */
+.product-group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    flex-shrink: 0;
+    /* product-category-buttonとproduct-buttonの幅はgridが自動計算するため、widthプロパティは不要 */
 }
