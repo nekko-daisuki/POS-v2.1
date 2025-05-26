@@ -135,7 +135,7 @@ body {
 /* POSコンテナの調整 (ヘッダーと重ならないように) */
 .pos-container {
     display: flex;
-    width: 95%;
+    width: 80%;
     max-width: 1280px;
     background-color: #ECF0F1; /* 明るいグレーをパネルの背景に */
     border-radius: 8px;
