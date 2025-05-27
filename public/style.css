@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     background-color: #ECF0F1; /* 明るいグレーを背景に */
     margin: 0;
-    overflow: hidden; /* 画面全体のスクロールを禁止 */
+    overflow: auto; /* 画面全体のスクロールを禁止 */
     color: #2C3E50; /* 基本のテキスト色を濃い青に */
 }
 
