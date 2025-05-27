@@ -482,18 +482,14 @@ body {
 
 /* 履歴ページのスタイル */
 .history-container {
-    display: flex;
-    background-color: #ECF0F1; /* 明るいグレーをパネルの背景に */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* 影を強調 */
-    overflow: hidden;
-    margin-top: 0.1vh; /* ヘッダーの高さ分下げる */
-    margin-bottom: 40px;
-    border: 1px solid #BDC3C7; /* わずかなボーダーを追加して立体感を */
-    position: fixed; /* 画面に対して固定 */
+    width：95%；/＊ 縦画面の幅＊/
+    height: calc（100vh-100px）；/＊ 縦画面の高さ*/
+    margin-top: 60px; border-radius: 0; box-shadow: none;
+    position:fixed;/* 画面に対して固定*/
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 中央配置 */
+    transform: translate（-50%，-50%）;
+    overflow： hidden;/
     /* 横画面時のデフォルト値 */
     width: 80%; /* 横画面の幅 */
     height: 80vh; /* 横画面の高さ */
