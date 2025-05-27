@@ -1,4 +1,4 @@
-body {
+lbody {
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
@@ -482,16 +482,24 @@ body {
 
 /* 履歴ページのスタイル */
 .history-container {
-    margin-top: 60px; border-radius: 0; box-shadow: none;
-    position:fixed;/* 画面に対して固定*/
+    background-color: #ECF0F1; /* 明るいグレー */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    /* 横画面時のデフォルト値 */
+    width: 80%; /* 横画面と同じ幅 */
+    max-width: 800px;
+    margin-top: 80px; /* ヘッダーの高さ分下げる */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px); /* 画面の高さからヘッダーとマージンを引いた高さ */
+    border: 1px solid #BDC3C7;
+    position: fixed; /* 画面に対して固定 */
     top: 50%;
     left: 50%;
-    transform: translate（-50%，-50%）;
-    overflow： hidden;/
-    /* 横画面時のデフォルト値 */
-    width: 80%; /* 横画面の幅 */
-    height: 80vh; /* 横画面の高さ */
-    max-width: 1280px; /* 必要に応じて最大幅を設定 */
+    transform: translate(-50%, -50%); /* 中央配置 */
+    overflow: hidden; /* 履歴コンテナ内のスクロールは子要素に任せる */
 }
 
 .history-title {
