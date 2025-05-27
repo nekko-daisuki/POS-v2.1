@@ -482,8 +482,6 @@ body {
 
 /* 履歴ページのスタイル */
 .history-container {
-    width：95%；/＊ 縦画面の幅＊/
-    height: calc（100vh-100px）；/＊ 縦画面の高さ*/
     margin-top: 60px; border-radius: 0; box-shadow: none;
     position:fixed;/* 画面に対して固定*/
     top: 50%;
