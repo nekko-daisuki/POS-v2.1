@@ -669,7 +669,6 @@ body {
 
     /* 履歴コンテナの調整 */
     .history-container {
-        display: flex;
         background-color: #ECF0F1; /* 明るいグレーをパネルの背景に */
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* 影を強調 */
