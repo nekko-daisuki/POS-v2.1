@@ -499,7 +499,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* 中央配置 */
-    overflow: hidden; /* 履歴コンテナ内のスクロールは子要素に任せる */
+    overflow: auto; /* 履歴コンテナ内のスクロールは子要素に任せる */
 }
 
 .history-title {
