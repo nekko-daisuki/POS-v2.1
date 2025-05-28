@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     background-color: #ECF0F1; /* 明るいグレーを背景に */
     margin: 0;
-    overflow: auto; /* 画面全体のスクロールを禁止 */
+    overflow-y: auto; /* 画面全体のスクロールを禁止 */
     color: #2C3E50; /* 基本のテキスト色を濃い青に */
 }
 
@@ -483,7 +483,6 @@ body {
 /* 履歴ページのスタイル */
 .history-container {
     background-color: #ECF0F1;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     width: 80%;                /* pos-containerと同じ幅 */
@@ -498,7 +497,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* 中央配置 */
-    overflow: scroll;
+    overflow-y: auto;
     z-index: 100;              /* 必要に応じてpos-containerと同じに */
 }
 
@@ -517,7 +516,7 @@ body {
     overflow-y: auto; /* 注文履歴をスクロール可能に */
     margin-bottom: 20px;
     border: 1px solid #BDC3C7;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     background-color: #FAFCFD; /* 少し明るいグレーをリスト背景に */
 }
