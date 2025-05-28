@@ -587,12 +587,13 @@ body {
 @media (orientation: portrait) { /* 縦画面のとき */
     body {
         overflow: hidden; /* 画面全体のスクロールを禁止 */
+        font-size: 2.8vw;
     }
     .pos-container {
         flex-direction: column;
         width: 90%; /* 縦画面の幅 */
         height: calc(100vh - 100px); /* ヘッダーにかぶらない程度の高さ */
-        margin-top: 0.5px; /* ヘッダーの高さ分下げる */
+        margin-top: 2.5vh; /* ヘッダーの高さ分下げる */
         border-radius: 8px;
         box-shadow: none;
         position: fixed; /* 画面に対して固定 */
@@ -672,10 +673,10 @@ body {
 
     /* 履歴コンテナの調整 */
     .history-container {
-        width: 95%;                      /* pos-containerと同じ幅 */
+        width: 90%;                      /* pos-containerと同じ幅 */
         max-width: unset;
         height: calc(100vh - 100px);     /* pos-containerと同じ高さ */
-        margin-top: 0.5px;               /* pos-containerと同じmargin-top */
+        margin-top: 2.5vh;               /* pos-containerと同じmargin-top */
         border-radius: 8px;
         box-shadow: none;
         position: fixed;
