@@ -142,6 +142,7 @@ body {
     overflow: hidden;
     margin-top: 0.1vh; /* ヘッダーの高さ分下げる */
     margin-bottom: 40px;
+    padding: 20px;
     border: 1px solid #BDC3C7; /* わずかなボーダーを追加して立体感を */
     position: fixed; /* 画面に対して固定 */
     top: 50%;
@@ -158,7 +159,6 @@ body {
     width: 35%; /* pos-containerの35% */
     min-width: 300px;
     padding: 20px;
-    border-right: 1px solid #BDC3C7; /* 中間グレーのボーダー */
     display: flex;
     flex-direction: column;
 }
@@ -291,6 +291,7 @@ body {
     gap: 10px;
     background-color: #F8F9FA; /* メニューパネルは少し明るい背景に */
     overflow-y: auto; /* menu-panelをスクロール可能に */
+    border-radius: 8px;
 }
 
 .product-group {
@@ -498,6 +499,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /* 中央配置 */
     overflow-y: auto;
+    padding: 20px;
     z-index: 100;              /* 必要に応じてpos-containerと同じに */
 }
 
@@ -573,6 +575,7 @@ body {
     padding: 10px 20px;
     font-size: 1.1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .btn-back:hover {
