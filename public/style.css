@@ -494,11 +494,12 @@ body {
     flex-direction: column;
     height: 80vh;              /* pos-containerと同じ高さ */
     border: 1px solid #BDC3C7;
-    position: fixed;
+    position: fixed;           /* 画面中央に固定 */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* 中央配置 */
     overflow: scroll;
+    z-index: 100;              /* 必要に応じてpos-containerと同じに */
 }
 
 .history-title {
@@ -671,7 +672,7 @@ body {
     /* 履歴コンテナの調整 */
     .history-container {
         width: 95%;                      /* pos-containerと同じ幅 */
-        max-width: unset;                /* 幅制限を解除 */
+        max-width: unset;
         height: calc(100vh - 100px);     /* pos-containerと同じ高さ */
         margin-top: 0.5px;               /* pos-containerと同じmargin-top */
         border-radius: 8px;
