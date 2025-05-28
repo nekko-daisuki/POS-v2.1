@@ -482,24 +482,23 @@ body {
 
 /* 履歴ページのスタイル */
 .history-container {
-    background-color: #ECF0F1; /* 明るいグレー */
+    background-color: #ECF0F1;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    /* 横画面時のデフォルト値 */
-    width: 80%; /* 横画面と同じ幅 */
-    max-width: 800px;
-    margin-top: 80px; /* ヘッダーの高さ分下げる */
-    margin-bottom: 20px;
+    width: 80%;                /* pos-containerと同じ幅 */
+    max-width: 1280px;         /* pos-containerと同じ最大幅 */
+    margin-top: 0.1vh;         /* pos-containerと同じmargin-top */
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 100px); /* 画面の高さからヘッダーとマージンを引いた高さ */
+    height: 80vh;              /* pos-containerと同じ高さ */
     border: 1px solid #BDC3C7;
-    position: fixed; /* 画面に対して固定 */
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 中央配置 */
-    overflow: scroll; /* 履歴コンテナ内のスクロールは子要素に任せる */
+    transform: translate(-50%, -50%);
+    overflow: scroll;
 }
 
 .history-title {
@@ -671,16 +670,17 @@ body {
 
     /* 履歴コンテナの調整 */
     .history-container {
-        width: 95%; /* 縦画面の幅 */
-        height: calc(100vh - 100px); /* 縦画面の高さ */
-        margin-top: 60px;
-        border-radius: 0;
+        width: 95%;                      /* pos-containerと同じ幅 */
+        max-width: unset;                /* 幅制限を解除 */
+        height: calc(100vh - 100px);     /* pos-containerと同じ高さ */
+        margin-top: 0.5px;               /* pos-containerと同じmargin-top */
+        border-radius: 8px;
         box-shadow: none;
-        position: fixed; /* 画面に対して固定 */
+        position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); /* 中央配置 */
-        overflow: hidden; /* 履歴コンテナ内のスクロールは子要素に任せる */
+        transform: translate(-50%, -50%);
+        overflow: hidden;
     }
 
     /* ヘッダーのレスポンシブ調整 */
