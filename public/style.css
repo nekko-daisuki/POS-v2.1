@@ -590,7 +590,7 @@ body {
     }
     .pos-container {
         flex-direction: column;
-        width: 95%; /* 縦画面の幅 */
+        width: 90%; /* 縦画面の幅 */
         height: calc(100vh - 100px); /* ヘッダーにかぶらない程度の高さ */
         margin-top: 0.5px; /* ヘッダーの高さ分下げる */
         border-radius: 8px;
